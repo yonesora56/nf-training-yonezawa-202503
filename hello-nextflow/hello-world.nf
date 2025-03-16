@@ -5,6 +5,10 @@
  */
 process sayHello {
 
+    // publishDir を追加
+    // https://www.nextflow.io/docs/latest/reference/process.html#publishdir
+    publishDir 'results', mode: 'copy', overwrite: false
+
     output:
         path 'output.txt'
 
